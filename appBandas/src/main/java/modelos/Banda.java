@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Entidad que representa a una banda de música en el sistema. Sirve como eje
  * central para agrupar usuarios, eventos, inventario y demás recursos.
@@ -26,9 +28,11 @@ public class Banda {
 	@Column(name = "f_fundacion")
 	private LocalDate fFundacion;
 
+	@JsonIgnore
 	@OneToMany(mappedBy = "banda", cascade = CascadeType.ALL)
 	private List<Usuario> usuarios;
 
+	@JsonIgnore
 	@OneToMany(mappedBy = "banda", cascade = CascadeType.ALL)
 	private List<Evento> eventos;
 

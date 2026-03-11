@@ -3,6 +3,8 @@ package modelos;
 import jakarta.persistence.*;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Entidad que clasifica a los instrumentos por familias o secciones musicales.
  * Por ejemplo: Cornetas, Trompetas, Bajos o Percusión.
@@ -19,6 +21,7 @@ public class Seccion {
 	@Column(name = "Nombre", nullable = false, length = 50)
 	private String nombre;
 
+	@JsonIgnore
 	@OneToMany(mappedBy = "seccion", cascade = CascadeType.ALL)
 	private List<Instrumento> instrumentos;
 

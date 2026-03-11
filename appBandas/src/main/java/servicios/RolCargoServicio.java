@@ -1,0 +1,37 @@
+package servicios;
+
+import modelos.RolCargo;
+import repositorios.RolCargoRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * Servicio para gestionar los cargos y roles dentro de la junta o área musical.
+ */
+@Service
+public class RolCargoServicio {
+
+    private final RolCargoRepository rolCargoRepository;
+
+    public RolCargoServicio(RolCargoRepository rolCargoRepository) {
+        this.rolCargoRepository = rolCargoRepository;
+    }
+
+    public List<RolCargo> obtenerTodosLosCargos() {
+        return rolCargoRepository.findAll();
+    }
+
+    public Optional<RolCargo> obtenerCargoPorId(Integer id) {
+        return rolCargoRepository.findById(id);
+    }
+
+    public RolCargo guardarCargo(RolCargo rolCargo) {
+        return rolCargoRepository.save(rolCargo);
+    }
+
+    public void eliminarCargo(Integer id) {
+        rolCargoRepository.deleteById(id);
+    }
+}

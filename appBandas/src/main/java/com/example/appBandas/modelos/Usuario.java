@@ -6,6 +6,7 @@ import java.time.LocalDate;
 /**
  * Entidad que representa a un músico o miembro de la directiva de la banda.
  * Almacena los datos personales, de contacto y de acceso a la aplicación.
+ * Incorpora el sistema de validación 'aprobado' para la sala de espera.
  */
 @Entity
 @Table(name = "Usuario")
@@ -67,6 +68,10 @@ public class Usuario {
 
 	@Column(name = "rolApp", length = 20)
 	private String rolApp;
+
+	// NUEVO: Atributo para la sala de espera (por defecto falso)
+	@Column(name = "aprobado", columnDefinition = "boolean default false")
+	private Boolean aprobado;
 
 	// Constructores
 	public Usuario() {
@@ -215,5 +220,13 @@ public class Usuario {
 
 	public void setRolApp(String rolApp) {
 		this.rolApp = rolApp;
+	}
+
+	public Boolean getAprobado() {
+		return aprobado;
+	}
+
+	public void setAprobado(Boolean aprobado) {
+		this.aprobado = aprobado;
 	}
 }

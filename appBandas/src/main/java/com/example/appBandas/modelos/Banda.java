@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * Entidad que representa a una banda de música en el sistema. Sirve como eje
  * central para agrupar usuarios, eventos, inventario y demás recursos.
+ * Ahora incluye el color corporativo para la interfaz de la aplicación.
  */
 @Entity
 @Table(name = "Bandas")
@@ -31,6 +32,10 @@ public class Banda {
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "f_fundacion")
 	private LocalDate fFundacion;
+
+	// Atributo añadido para guardar el color hexadecimal (ej. #FF0000)
+	@Column(name = "color_primario", length = 10)
+	private String colorPrimario;
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "banda", cascade = CascadeType.ALL)
@@ -75,6 +80,14 @@ public class Banda {
 
 	public void setfFundacion(LocalDate fFundacion) {
 		this.fFundacion = fFundacion;
+	}
+
+	public String getColorPrimario() {
+		return colorPrimario;
+	}
+
+	public void setColorPrimario(String colorPrimario) {
+		this.colorPrimario = colorPrimario;
 	}
 
 	public List<Usuario> getUsuarios() {

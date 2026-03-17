@@ -15,10 +15,13 @@
         android:theme="@style/Theme.AppBandas"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".vistas.MenuPrincipalActivity"
+            android:name=".vistas.autenticacion.BuscarBandaActivity"
             android:exported="false" />
         <activity
-            android:name=".vistas.LoginActivity"
+            android:name=".vistas.autenticacion.CrearBandaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.autenticacion.BienvenidaActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +29,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".vistas.comun.MenuPrincipalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".vistas.autenticacion.LoginActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

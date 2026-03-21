@@ -1,0 +1,176 @@
+/**
+ * ==========================================
+ * DICCIONARIO MAESTRO DE CSS PARA JAVAFX
+ * ==========================================
+ * Referencia completa de propiedades aplicables a Nodos, Regiones y Controles.
+ */
+
+.referencia-fondos {
+    /* ----- FONDOS COMPLETOS (BACKGROUNDS) ----- */
+    -fx-background-color: #FFFFFF;
+    
+    /* Distancia del fondo hacia adentro (arriba, derecha, abajo, izquierda) */
+    -fx-background-insets: 0px 0px 0px 0px; 
+    
+    /* Redondeo de las esquinas del fondo */
+    -fx-background-radius: 5px;
+    
+    /* Imagen de fondo */
+    -fx-background-image: url("ruta/imagen.png");
+    
+    /* Repeticion (repeat, repeat-x, repeat-y, no-repeat, space, round) */
+    -fx-background-repeat: no-repeat;
+    
+    /* Posicion (center, top, bottom, left, right o porcentajes) */
+    -fx-background-position: center center;
+    
+    /* Tamano (auto, cover, contain, o medidas exactas) */
+    -fx-background-size: cover;
+}
+
+.referencia-bordes {
+    /* ----- BORDES COMPLETOS (BORDERS) ----- */
+    -fx-border-color: #000000;
+    
+    /* Distancia del borde hacia adentro */
+    -fx-border-insets: 0px;
+    
+    /* Redondeo de las esquinas del borde */
+    -fx-border-radius: 5px;
+    
+    /* Grosor del borde */
+    -fx-border-width: 2px;
+    
+    /* Estilos: solid, dashed (rayas), dotted (puntos) */
+    -fx-border-style: solid;
+    
+    /* Borde usando una imagen */
+    -fx-border-image-source: url("ruta/borde.png");
+    -fx-border-image-slice: 100% 100% 100% 100%;
+    -fx-border-image-width: 5px;
+    -fx-border-image-repeat: stretch;
+}
+
+.referencia-textos {
+    /* ----- TIPOGRAFIA Y TEXTOS (FONTS & TEXT) ----- */
+    -fx-text-fill: #333333;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 16px; /* Tambien admite em o pt */
+    -fx-font-style: normal; /* normal, italic, oblique */
+    -fx-font-weight: normal; /* normal, bold, bolder, lighter o 100-900 */
+    
+    /* Alineacion general del nodo */
+    -fx-alignment: center; /* top-left, bottom-right, center, etc. */
+    
+    /* Alineacion especifica del texto (left, center, right, justify) */
+    -fx-text-alignment: left;
+    
+    /* Efectos de linea */
+    -fx-underline: false;
+    -fx-strikethrough: false; /* Texto tachado */
+    
+    /* Espaciado entre lineas de texto */
+    -fx-line-spacing: 2px;
+    
+    /* Comportamiento del texto largo */
+    -fx-wrap-text: true; /* Permite que el texto salte a la siguiente linea */
+    -fx-text-overrun: ellipsis; /* Pone "..." si el texto no cabe (clip, ellipsis, leading-ellipsis) */
+}
+
+.referencia-cajas-texto {
+    /* ----- ESPECIFICO PARA TEXTFIELD Y PASSWORDFIELD ----- */
+    
+    /* Color del texto de pista (el que dice "Escribe aqui...") */
+    -fx-prompt-text-fill: #999999;
+    
+    /* Color del fondo cuando seleccionas/sombreas el texto con el raton */
+    -fx-highlight-fill: #2196F3;
+    
+    /* Color de las letras cuando estan seleccionadas/sombreadas */
+    -fx-highlight-text-fill: #FFFFFF;
+    
+    /* Mostrar u ocultar el palito que parpadea al escribir */
+    -fx-display-caret: true;
+    
+    /* Color del palito que parpadea al escribir */
+    -fx-caret-fill: #000000;
+}
+
+.referencia-tamanos {
+    /* ----- TAMANOS Y ESPACIADOS (SIZING & PADDING) ----- */
+    
+    /* Margen interno (espacio entre el borde y el contenido) */
+    -fx-padding: 10px 15px 10px 15px; 
+    
+    /* Espacio entre hijos (Solo para HBox y VBox) */
+    -fx-spacing: 15px;
+    
+    /* Espacio entre hijos (Solo para GridPane o FlowPane) */
+    -fx-hgap: 10px; /* Hueco horizontal */
+    -fx-vgap: 10px; /* Hueco vertical */
+    
+    /* Controles de tamano absoluto */
+    -fx-pref-width: 200px;
+    -fx-pref-height: 50px;
+    -fx-min-width: 50px;
+    -fx-min-height: 20px;
+    -fx-max-width: 1000px;
+    -fx-max-height: 1000px; /* Usar Infinity para que ocupe todo lo posible */
+}
+
+.referencia-efectos {
+    /* ----- EFECTOS VISUALES Y GRAFICOS (EFFECTS) ----- */
+    
+    /* Nivel de transparencia (0.0 a 1.0) */
+    -fx-opacity: 1.0;
+    
+    /* Forma del cursor del raton (default, hand, text, wait, move, crosshair) */
+    -fx-cursor: hand;
+    
+    /* Sombras (tipo, color, radio, propagacion, offset-x, offset-y) */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);
+    
+    /* Desenfocar el elemento */
+    -fx-effect: gaussianblur(10);
+    
+    /* Modo de mezcla con el fondo (multiply, screen, overlay, darken, lighten) */
+    -fx-blend-mode: multiply;
+}
+
+.referencia-transformaciones {
+    /* ----- TRANSFORMACIONES 2D (TRANSFORMS) ----- */
+    
+    /* Rotacion en grados */
+    -fx-rotate: 45;
+    
+    /* Escala (tamano). 1.0 es el normal, 2.0 es el doble, 0.5 es la mitad */
+    -fx-scale-x: 1.5;
+    -fx-scale-y: 1.5;
+    
+    /* Desplazamiento desde su posicion original (en pixeles) */
+    -fx-translate-x: 10px;
+    -fx-translate-y: -5px;
+}
+
+.referencia-botones-iconos {
+    /* ----- ICONOS Y GRAFICOS EN BOTONES/LABELS ----- */
+    
+    /* Anade una imagen al lado del texto del boton o etiqueta */
+    -fx-graphic: url("ruta/icono.png");
+    
+    /* Posicion del icono respecto al texto (left, right, top, bottom, center) */
+    -fx-content-display: left;
+    
+    /* Espacio de separacion entre el icono y el texto */
+    -fx-graphic-text-gap: 8px;
+}
+
+.referencia-tablas-listas {
+    /* ----- ESPECIFICO PARA TABLEVIEW Y LISTVIEW ----- */
+    
+    /* Tamano fijo para todas las filas (mejora mucho el rendimiento) */
+    -fx-fixed-cell-size: 40px;
+    
+    /* Ocultar las lineas divisorias de la tabla */
+    -fx-table-cell-border-color: transparent;
+}

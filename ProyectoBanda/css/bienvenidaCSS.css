@@ -1,0 +1,89 @@
+/**
+ * Hoja de estilos de bienvenida.
+ * Transforma el diseno web de Tailwind a JavaFX manteniendo la paleta de colores.
+ */
+
+.root {
+    /* Paleta de colores extraida del Tailwind web */
+    -color-primario: #7f13ec;
+    -color-primario-hover: #6a0fc4;
+    -color-fondo-claro: #f7f6f8;
+    -color-texto-oscuro: #191022;
+    -color-texto-gris: #64748b;
+    -color-boton-gris: #e2e8f0;
+    -color-boton-gris-hover: #cbd5e1;
+    -color-blanco: #ffffff;
+    
+    /* Aplicamos el fondo a toda la ventana */
+    -fx-background-color: -color-fondo-claro;
+    -fx-font-family: "Georgia", sans-serif;
+}
+
+/* Configuracion de la caja vertical central */
+.caja-central {
+    -fx-spacing: 25px; /* Espacio entre los elementos */
+    -fx-padding: 40px;
+}
+
+/* Tipografia de los textos */
+.titulo-principal {
+    -fx-font-size: 45px;
+    -fx-font-weight: 900;
+    -fx-text-fill: -color-texto-oscuro;
+}
+
+.subtitulo {
+    -fx-font-size: 16px;
+    -fx-text-fill: -color-texto-gris;
+    -fx-text-alignment: center;
+    -fx-max-width: 450px; /* Evita que el texto ocupe todo el ancho de la pantalla */
+}
+
+/* Diseno del boton principal (Morado) */
+.boton-primario {
+    -fx-background-color: -color-primario;
+    -fx-text-fill: -color-blanco;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px;
+    -fx-padding: 15px 30px;
+    -fx-pref-width: 350px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(127, 19, 236, 0.3), 10, 0, 0, 5);
+}
+
+.boton-primario:hover {
+    -fx-background-color: -color-primario-hover;
+}
+
+/* Diseno del boton secundario (Gris) */
+.boton-secundario {
+    -fx-background-color: -color-boton-gris;
+    -fx-text-fill: -color-texto-oscuro;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px;
+    -fx-padding: 15px 30px;
+    -fx-pref-width: 350px;
+    -fx-cursor: hand;
+}
+
+.boton-secundario:hover {
+    -fx-background-color: -color-boton-gris-hover;
+}
+
+/* Estilos para el separador con la "o" en medio */
+.caja-separador {
+    -fx-spacing: 15px;
+    -fx-pref-width: 350px;
+    -fx-max-width: 350px;
+}
+
+.linea-separador {
+    -fx-pref-width: 150px; 
+}
+
+.texto-separador {
+    -fx-text-fill: -color-texto-gris;
+    -fx-font-size: 14px;
+}
